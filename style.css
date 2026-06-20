@@ -1001,3 +1001,12 @@ header p{
 .remember-me-container label {
   cursor: pointer;
 }
+
+
+.login-error {
+  color: #f87171;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  min-height: 1.2em;
+  text-align: center;
+}

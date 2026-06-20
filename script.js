@@ -47,6 +47,7 @@ const cookieConsent = document.getElementById("cookie-consent");
 const cookieAcceptBtn = document.getElementById("cookie-accept");
 const cookieRejectBtn = document.getElementById("cookie-reject");
 const rememberMeCheckbox = document.getElementById("remember-me");
+const loginError = document.getElementById("login-error");
 
 let seePassword = false;
 
@@ -160,21 +161,43 @@ menuLinks.forEach((menuLink)=>menuLink.addEventListener("click", ()=>{
 
 
 function loginUser(){
-    if ((usernameInput.value.trim() === professorUsername && passwordInput.value.trim() === professorPassword)
-        || (usernameInput.value.trim() === guestUsername && passwordInput.value.trim() === guestPassword)){
+    const enteredUsername = usernameInput.value.trim();
+    const enteredPassword = passwordInput.value.trim();
+
+    if ((enteredUsername === professorUsername && enteredPassword === professorPassword)
+        || (enteredUsername === guestUsername && enteredPassword === guestPassword)){
 
             // only store a cookie if the user accepted cookies AND checked "remember me"
             const consentStatus = getCookie("cookieConsent");
             if (rememberMeCheckbox.checked && consentStatus === "accepted") {
-                setCookie("rememberedUsername", usernameInput.value.trim(), 30);
+                setCookie("rememberedUsername", enteredUsername, 30);
             } else {
                 deleteCookie("rememberedUsername");
             }
+
+            // clear error message if any
+            loginError.textContent = "";
 
             loginScreen.classList.remove("active");
             loginScreen.classList.add("hidden");
             mainScreen.classList.add("active");
             mainScreen.classList.remove("hidden");
+
+            // reset password field always
+            passwordInput.value = "";
+
+            // reset username field too, unless it should be remembered
+            const remembered = getCookie("rememberedUsername");
+            if (remembered) {
+                usernameInput.value = remembered;
+            } else {
+                usernameInput.value = "";
+            }
+
+    } else {
+        // incorrect credentials
+        loginError.textContent = "Incorrect username or password. Please try again.";
+        passwordInput.value = "";
     }
 }
 
