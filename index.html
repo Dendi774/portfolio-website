@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olivar - Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="cookie-consent" id="cookie-consent">
+        <div class="cookie-icon"><i class="fa-solid fa-cookie-bite"></i></div>
+        <div class="cookie-text">
+            <h3>Cookies & You</h3>
+            <p>This website uses cookies to remember your username for a faster login next time. No passwords are ever stored. Do you accept?</p>
+        </div>
+        <div class="cookie-btns">
+            <button id="cookie-accept">Accept</button>
+            <button id="cookie-reject">Reject</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="login-screen active">
+            <header>
+                <i class="fa-solid fa-shield"></i>
+                <h1>Welcome to my Portfolio Website</h1>
+                <p>Please sign in below</p>
+            </header>
+
+            <div class="form-container">
+                <div class="input-container">
+                    <i class="fa-solid fa-user" id="username-icon"></i>
+                    <input type="text" id="username" placeholder="username">
+                </div>
+                <div class="input-container">
+                    <i class="fa-solid fa-lock" id="password-icon"></i>
+                    <input type="password" id="password" placeholder="Password">
+                    <i class="fa-regular fa-eye" id="eye-icon"></i>
+                </div>
+                <button id="login-btn">Login <i class="fa-solid fa-arrow-right"></i></button>
+                <div class="remember-me-container">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Remember my username</label>
+                </div>
+            </div>
+        </div>
+        <div class="main-screen hidden">
+            <nav class="desktop-nav">
+                        <ul>
+                            <li><a href="#about-section">About</a></li>
+                            <li><a href="#experience-section">Experience</a></li>
+                            <li><a href="#projects-section">Projects</a></li>
+                            <li><a href="#contact-section">Contact Me</a></li>
+                            <li><button id="logout-btn">Logout</button></li>
+                            <div class="socials-clock-container">
+                                <li class="socials">
+                                    <a href="https://www.facebook.com/christopher.denmark.olivar.2024" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/den.olvr/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                                    <a href="https://github.com/Dendi774" target="_blank"><i class="fa-brands fa-github"></i> </a>
+                                </li>
+                                <div class="date-clock">
+                                    <div class="date">
+                                        <i class="fa-solid fa-calendar"></i>
+                                        <p class="date-text" id="date-text-1">day, date, year</p>
+                                    </div>
+                                    <div class="clock">
+                                        <i class="fa-solid fa-clock"></i>
+                                        <p class="clock-text" id="clock-text-1">00:00:00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </nav>
+
+                    <nav class="hamburger-nav">
+                        <div class="social-links-clock-container">
+                            <a href="https://www.facebook.com/christopher.denmark.olivar.2024" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/den.olvr/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                            <a href="https://github.com/Dendi774" target="_blank"><i class="fa-brands fa-github"></i> </a>
+                            <div class="date-clock">
+                                    <div class="date">
+                                        <i class="fa-solid fa-calendar"></i>
+                                        <p class="date-text" id="date-text-2">day, date, year</p>
+                                    </div>
+                                    <div class="clock">
+                                        <i class="fa-solid fa-clock"></i>
+                                        <p class="clock-text-2" id="clock-text-2">00:00:00</p>
+                                    </div>
+                                </div>
+                        </div>
+                        
+                        <div class="hamburger-menu">
+                            <div class="hamburger-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="menu-links">
+                                <a href="#about-section">About</a>
+                                <a href="#experience-section">Experience</a>
+                                <a href="#projects-section">Projects</a>
+                                <a href="#contact-section">Contact</a>
+                                <a id="logout-btn-hamburger">Logout</a>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <div class="introduction-section">
+                        <div class="name-description">
+                            <h1>Hi! I'm Christopher Denmark Olivar</h1>
+                            <p>I am currently a college student studying his second year of Information Technology
+                                in Polytechnic University of the Philippines. Apart from just studying, I am currently upskilling and
+                                aspiring to be a full stack web developer, specializing in Back-end Development.
+                            </p>
+                            <div class="cv-contact-btns">
+                                <button id="cv-btn">Download CV</button>
+                                <button id="contact-btn">Contact Info</button>
+                            </div>
+                            
+                        </div>
+                        <div class="profile-img-container">
+                            <img src="assets/profile.jpg" alt="profile Image" />
+                        </div>
+                    </div>
+
+                    <div class="about-section" id="about-section">
+                        <p>Get to know more</p>
+                        <h1>About Me</h1>
+                        <div class="about-me-container">
+                            <div class="about-img-container">
+                                <img src="assets/about-pic.jpg" alt="about me picture">
+                            </div>
+
+                            <div class="details-container">
+                                <div class="details-card">
+                                    <i class="fa-solid fa-award"></i>
+                                    <h3>Experience</h3>
+                                    <p>2+ years of experience in frontend Web Development</p>
+                                    <p>3+ years of experience in backend development languages, python and java</p>
+                                </div>
+
+                                <div class="details-card">
+                                    <i class="fa-solid fa-user-graduate"></i>
+                                    <h3>Education</h3>
+                                    <p>Senior Highschool Graduate under STEM Strand</p>
+                                    <p>Ongoing undergraduate BSIT student in PUP Paranque</p>
+                                </div>
+
+                                <div class="details-card">
+                                    <i class="fa-solid fa-code"></i>
+                                    <h3>Algorithm and Data Structures</h3>
+                                    <p>Solved <span style="color:#a78bfa; font-weight:bold;">173</span> Leetcode Algorithmic Problems</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="experience-section" id="experience-section">
+                        <p>Explore my</p>
+                        <h1>Experience</h1>
+
+                        <div class="experience-container">
+                            <div class="experience-card">
+                                <h2>Frontend Development</h2>
+                                <div class="experience-list">
+                                    <div class="experience">
+                                        <div class="icon-container">
+                                            <i class="fa-solid fa-circle-check"></i>
+                                        </div>
+                                        <div class="experience-description">
+                                            <h3>HTML</h3>
+                                            <p>Experienced</p>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="experience">
+                                        <div class="icon-container"><i class="fa-solid fa-circle-check"></i></div>
+                                        <div class="experience-description">
+                                            <h3>Tailwind CSS</h3>
+                                            <p>Intermediate</p>
+                                        </div>  
+                                    </div>
+                                    <div class="experience">
+                                        <div class="icon-container"><i class="fa-solid fa-circle-check"></i></div>
+                                        <div class="experience-description">
+                                            <h3>Javascript</h3>
+                                            <p>Intermediate</p>
+                                        </div>
+                                    </div>
+                                    <div class="experience">
+                                        <div class="icon-container"><i class="fa-solid fa-circle-check"></i></div>
+                                        <div class="experience-description">
+                                            <h3>React JS</h3>
+                                            <p>Basics</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="experience-card">
+                                <h2>Backend Development</h2>
+                                <div class="experience-list">
+                                    <div class="experience">
+                                        <div class="icon-container"><i class="fa-solid fa-circle-check"></i></div>
+                                        <div class="experience-description">
+                                            <h3>Python</h3>
+                                            <p>Experienced</p>
+                                        </div>
+                                    </div>
+                                    <div class="experience">
+                                        <div class="icon-container"><i class="fa-solid fa-circle-check"></i></div>
+                                        <div class="experience-description">
+                                            <h3>Java</h3>
+                                            <p>Intermediate</p>
+                                        </div>
+                                    </div>
+                                    <div class="experience">
+                                        <div class="icon-container"><i class="fa-solid fa-circle-check"></i></div>
+                                        <div class="experience-description">
+                                            <h3>C++</h3>
+                                            <p>Intermediate</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projects-section" id="projects-section">
+                        <p>Look at my latest</p>
+                        <h1>Projects</h1>
+
+                        <div class="project-list-container">
+                            <div class="project-card">
+                                <div class="project-img-container">
+                                    <img src="assets/jeepney_fuel_consumption_project.png" alt="jeepney fuel consumption simulator project image">
+                                </div>
+                                <div class="project-description">
+                                    <h2>Jeepney Fuel Consumption Simulation</h2>
+                                    <button id="jeepney-project-btn">Github</button>
+                                </div>
+                            </div>
+
+                            <div class="project-card">
+                                <div class="project-img-container">
+                                    <img src="assets/PUParazzi_project.png" alt="jeepney fuel consumption simulator project image">
+                                </div>
+                                <div class="project-description">
+                                    <h2>PUParazzi App - 4pics1Word Clone</h2>
+                                    <button id="puparazzi-btn">Github</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-section" id="contact-section">
+                        <div class="contact-media">
+                            <video autoplay loop playsinline class="contact-video">
+                                <source src="assets/loml_vid.mp4" type="video/mp4">
+                            </video>
+
+                            <div class="contact-content">
+                                <p>Get in Touch</p>
+                                <h1>Contact Me</h1>
+
+                                <div class="contact-links-container">
+                                    <div class="contact-link">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        <a href="mailto:denmarkph29@gmail.com" target="_blank">denmarkph29@gmail.com</a>
+                                    </div>
+
+                                    <div class="contact-link">
+                                        <i class="fa-brands fa-github"></i>
+                                        <a href="https://github.com/Dendi774" target="_blank">Github</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <footer>
+                        <p>Copyright &#169; 2026 Olivar. All Rights Reserved.</p>
+                    </footer>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
